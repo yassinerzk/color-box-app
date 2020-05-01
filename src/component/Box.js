@@ -4,7 +4,14 @@ class Box extends React.Component {
   render() {
     return (
       <div>
-        <h1>Box</h1>
+        <div
+          style={{
+            height: `${this.props.height}em`,
+            width: `${this.props.width}em`,
+            background: this.props.background,
+          }}
+        ></div>
+        <button onClick={this.props.removeBox}>-</button>
       </div>
     );
   }
